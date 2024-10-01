@@ -6,7 +6,6 @@ const EARTH_RADIUS = 6; // Base size in pixels
 const PLANETS = [
   {
     name: 'Mercury',
-    chineseName: '水星',
     color: '#8C7853',
     orbitRadius: 60,
     speed: 4.1,
@@ -16,7 +15,6 @@ const PLANETS = [
   },
   {
     name: 'Venus',
-    chineseName: '金星',
     color: '#FFA500',
     orbitRadius: 100,
     speed: 1.6,
@@ -27,7 +25,6 @@ const PLANETS = [
   },
   {
     name: 'Earth',
-    chineseName: '地球',
     color: '#1E90FF',
     orbitRadius: 140,
     speed: 1,
@@ -47,7 +44,6 @@ const PLANETS = [
   },
   {
     name: 'Mars',
-    chineseName: '火星',
     color: '#FF4500',
     orbitRadius: 180,
     speed: 0.5,
@@ -74,7 +70,6 @@ const PLANETS = [
   },
   {
     name: 'Jupiter',
-    chineseName: '木星',
     color: '#DEB887',
     orbitRadius: 220,
     speed: 0.08,
@@ -115,7 +110,6 @@ const PLANETS = [
   },
   {
     name: 'Saturn',
-    chineseName: '土星',
     color: '#F4A460',
     orbitRadius: 260,
     speed: 0.034,
@@ -136,7 +130,6 @@ const PLANETS = [
   },
   {
     name: 'Uranus',
-    chineseName: '天王星',
     color: '#40E0D0',
     orbitRadius: 300,
     speed: 0.012,
@@ -156,7 +149,6 @@ const PLANETS = [
   },
   {
     name: 'Neptune',
-    chineseName: '海王星',
     color: '#4169E1',
     orbitRadius: 340,
     speed: 0.006,
@@ -176,7 +168,6 @@ const PLANETS = [
   },
   {
     name: 'Pluto',
-    chineseName: '冥王星',
     color: '#B0C4DE',
     orbitRadius: 380,
     speed: 0.004,
@@ -249,7 +240,6 @@ const Planet = ({
   color,
   speed,
   name,
-  chineseName,
   sizeRatio,
   info,
   moons = [],
@@ -341,7 +331,7 @@ const Planet = ({
       </g>
       {hovered && (
         <text x={x} y={y - planetRadius - 10} fill="#fff" fontSize="12px" textAnchor="middle">
-          {name} ({chineseName})
+          {name})
         </text>
       )}
       {showInfo && <InfoBox x={infoPosition.x} y={infoPosition.y} name={name} info={info} />}
@@ -630,7 +620,6 @@ const SolarSystem = () => {
               color={planet.color}
               speed={planet.speed}
               name={planet.name}
-              chineseName={planet.chineseName}
               sizeRatio={planet.sizeRatio}
               info={planet.info}
               moons={planet.moons}
