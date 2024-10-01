@@ -331,7 +331,7 @@ const Planet = ({
       </g>
       {hovered && (
         <text x={x} y={y - planetRadius - 10} fill="#fff" fontSize="12px" textAnchor="middle">
-          {name})
+          {name}
         </text>
       )}
       {showInfo && <InfoBox x={infoPosition.x} y={infoPosition.y} name={name} info={info} />}
